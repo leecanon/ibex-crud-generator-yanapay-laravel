@@ -26,7 +26,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Pastel de papas') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -34,26 +34,30 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('investments.index') }}">{{ __('Capital') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('clients.index') }}">{{ __('Clientes') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('customer-details.index') }}">{{ __('Detalle Cliente') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('payments-types.index') }}">{{ __('Tipos de pago') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('loans.index') }}">{{ __('Prestamos') }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('dues.index') }}">{{ __('Cobrar Deudas') }}</a>
-                        </li>                        
+                    <ul class="navbar-nav me-auto">    
                         
+                        @if (Auth::check())
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('investments.index') }}">{{ __('Capital') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('clients.index') }}">{{ __('Clientes') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('customer-details.index') }}">{{ __('Detalle Cliente') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('payments-types.index') }}">{{ __('Tipos de pago') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('loans.index') }}">{{ __('Prestamos') }}</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('dues.index') }}">{{ __('Cobrar Deudas') }}</a>
+                                </li>   
+                        @endif
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->

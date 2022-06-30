@@ -48,6 +48,5 @@ class Due extends Model
     {
         return $this->hasOne('App\Models\Loan', 'id', 'id_loans');
     }
-    
 
 }

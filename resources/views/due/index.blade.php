@@ -41,6 +41,7 @@
 										<th>Debt Payment Date</th>
 										<th>State</th>
                                         <th>Cliente</th>
+                                        <th>Tipo de pago</th>
 
                                         <th></th>
                                     </tr>
@@ -55,6 +56,7 @@
 											<td>{{ $due->debt_payment_date }}</td>
 											<td>{{ $due->state }}</td>
                                             <td>{{ $due->loan->client->name }}</td>
+                                            <td>{{ $due->loan->paymentsType->description }}</td>
 
                                             <td>
                                                 <form action="{{ route('dues.destroy',$due->id) }}" method="POST">

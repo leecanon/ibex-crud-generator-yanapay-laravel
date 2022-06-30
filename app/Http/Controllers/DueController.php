@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Due;
+use App\Models\Client;
 use Illuminate\Http\Request;
 
 /**
@@ -73,7 +74,7 @@ class DueController extends Controller
     public function edit($id)
     {
         $due = Due::find($id);
-
+        // $name = Client::pluck('name', 'id');  ,'name'
         return view('due.edit', compact('due'));
     }
 

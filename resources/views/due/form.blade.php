@@ -26,7 +26,6 @@
             {{ Form::text('id_loans', $due->id_loans, ['class' => 'form-control' . ($errors->has('id_loans') ? ' is-invalid' : ''), 'placeholder' => 'Id Loans']) }}
             {!! $errors->first('id_loans', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-
     </div>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">Submit</button>

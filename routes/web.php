@@ -19,11 +19,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::resource('clients', App\Http\Controllers\ClientController::class); 
-Route::resource('payments-types', App\Http\Controllers\PaymentsTypeController::class); 
-Route::resource('dues', App\Http\Controllers\DueController::class); 
-Route::resource('loans', App\Http\Controllers\LoanController::class); 
-Route::resource('customer-details', App\Http\Controllers\CustomerDetailController::class); 
-Route::resource('investments', App\Http\Controllers\InvestmentController::class); 
+Route::resource('clients', App\Http\Controllers\ClientController::class)->middleware('auth'); 
+Route::resource('payments-types', App\Http\Controllers\PaymentsTypeController::class)->middleware('auth'); 
+Route::resource('dues', App\Http\Controllers\DueController::class)->middleware('auth'); 
+Route::resource('loans', App\Http\Controllers\LoanController::class)->middleware('auth'); 
+Route::resource('customer-details', App\Http\Controllers\CustomerDetailController::class)->middleware('auth'); 
+Route::resource('investments', App\Http\Controllers\InvestmentController::class)->middleware('auth'); 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
