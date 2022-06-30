@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CustomerDetail;
+use App\Models\Client;
 use Illuminate\Http\Request;
 
 /**
@@ -73,9 +74,10 @@ class CustomerDetailController extends Controller
     public function edit($id)
     {
         $customerDetail = CustomerDetail::find($id);
-
-        return view('customer-detail.edit', compact('customerDetail'));
+        $name = Client::pluck('name', 'id');
+        return view('customer-detail.edit', compact('customerDetail','name'));
     }
+ 
 
     /**
      * Update the specified resource in storage.

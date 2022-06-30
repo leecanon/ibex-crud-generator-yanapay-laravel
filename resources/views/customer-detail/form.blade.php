@@ -23,10 +23,9 @@
         </div>
         <div class="form-group">
             {{ Form::label('id_clients') }}
-            {{ Form::text('id_clients', $customerDetail->id_clients, ['class' => 'form-control' . ($errors->has('id_clients') ? ' is-invalid' : ''), 'placeholder' => 'Id Clients']) }}
+            {{ Form::select('id_clients', $name, $customerDetail->id_clients, ['class' => 'form-control' . ($errors->has('id_clients') ? ' is-invalid' : ''), 'placeholder' => 'Id Clients']) }}
             {!! $errors->first('id_clients', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-
     </div>
     <div class="box-footer mt20">
         <button type="submit" class="btn btn-primary">Submit</button>

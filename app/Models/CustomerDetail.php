@@ -13,6 +13,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property $business
  * @property $business_address
  * @property $id_clients
+ * @property $created_at
+ * @property $updated_at
  *
  * @property Client $client
  * @package App

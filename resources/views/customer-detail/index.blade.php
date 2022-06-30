@@ -54,7 +54,7 @@
 											<td>{{ $customerDetail->job_address }}</td>
 											<td>{{ $customerDetail->business }}</td>
 											<td>{{ $customerDetail->business_address }}</td>
-											<td>{{ $customerDetail->id_clients }}</td>
+											<td>{{ $customerDetail->client->name }}</td>
 
                                             <td>
                                                 <form action="{{ route('customer-details.destroy',$customerDetail->id) }}" method="POST">

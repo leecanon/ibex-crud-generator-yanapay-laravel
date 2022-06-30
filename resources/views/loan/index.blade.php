@@ -36,16 +36,16 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Id Clients</th>
-										<th>Loan Amount</th>
+										<th>Cliente</th>
+										<th>Monto de prestamo</th>
 										<th>Interest</th>
 										<th>Total Interest</th>
-										<th>Expenses</th>
-										<th>Number Debts</th>
-										<th>Currency</th>
-										<th>Start Date</th>
-										<th>Total Pay</th>
-										<th>Id Payments Types</th>
+										<th>Gastos</th>
+										<th>Moneda</th>
+										<th>Fecha de inicio</th>
+										<th>Total a pagar</th>
+                                        <th>Number de Cuotas</th>
+										<th>Tipo de pago</th>
 										<th>Id Investments</th>
 
                                         <th></th>
@@ -56,16 +56,17 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $loan->id_clients }}</td>
+											<td>{{ $loan->client->name }}</td>
+
 											<td>{{ $loan->loan_amount }}</td>
 											<td>{{ $loan->interest }}</td>
 											<td>{{ $loan->total_interest }}</td>
 											<td>{{ $loan->expenses }}</td>
-											<td>{{ $loan->number_debts }}</td>
 											<td>{{ $loan->currency }}</td>
 											<td>{{ $loan->start_date }}</td>
 											<td>{{ $loan->total_pay }}</td>
-											<td>{{ $loan->id_payments_types }}</td>
+                                            <td>{{ $loan->number_debts }}</td>
+											<td>{{ $loan->paymentsType->description }}</td>
 											<td>{{ $loan->id_investments }}</td>
 
                                             <td>

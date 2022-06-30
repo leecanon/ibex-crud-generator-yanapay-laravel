@@ -34,13 +34,13 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        {{-- <th>No</th> --}}
                                         
-										<th>Num Debts Order</th>
+										<th>Cantidad de Cuotas</th>
 										<th>Debt Amount</th>
 										<th>Debt Payment Date</th>
 										<th>State</th>
-										<th>Id Loans</th>
+                                        <th>Cliente</th>
 
                                         <th></th>
                                     </tr>
@@ -48,13 +48,13 @@
                                 <tbody>
                                     @foreach ($dues as $due)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            {{-- <td>{{ ++$i }}</td> --}}
                                             
 											<td>{{ $due->num_debts_order }}</td>
 											<td>{{ $due->debt_amount }}</td>
 											<td>{{ $due->debt_payment_date }}</td>
 											<td>{{ $due->state }}</td>
-											<td>{{ $due->id_loans }}</td>
+                                            <td>{{ $due->loan->client->name }}</td>
 
                                             <td>
                                                 <form action="{{ route('dues.destroy',$due->id) }}" method="POST">
