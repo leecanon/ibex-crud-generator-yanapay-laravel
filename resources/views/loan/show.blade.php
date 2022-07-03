@@ -57,12 +57,24 @@
                             {{ $loan->total_pay }}
                         </div>
                         <div class="form-group">
+                            <strong>Clause:</strong>
+                            {{ $loan->clause }}
+                        </div>
+                        <div class="form-group">
                             <strong>Id Payments Types:</strong>
                             {{ $loan->id_payments_types }}
                         </div>
                         <div class="form-group">
                             <strong>Id Investments:</strong>
                             {{ $loan->id_investments }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Late Payment:</strong>
+                            {{ $loan->late_payment }}
+                        </div>
+                        <div class="form-group">
+                            <strong>Total Late Payment:</strong>
+                            {{ $loan->total_late_payment }}
                         </div>
 
                     </div>

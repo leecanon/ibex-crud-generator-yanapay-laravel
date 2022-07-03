@@ -42,6 +42,14 @@
 										<th>Business Address</th>
 										<th>Id Clients</th>
 
+										{{-- <th>Document Type</th>
+										<th>Document Number</th>
+										<th>Address</th>
+										<th>City</th>
+										<th>Email</th>
+										<th>Phone Number</th>
+										<th>State</th> --}}
+
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -55,6 +63,14 @@
 											<td>{{ $customerDetail->business }}</td>
 											<td>{{ $customerDetail->business_address }}</td>
 											<td>{{ $customerDetail->client->name }}</td>
+
+											{{-- <td>{{ $customerDetail->client->document_type }}</td>
+											<td>{{ $customerDetail->client->document_number }}</td>
+											<td>{{ $customerDetail->client->address }}</td>
+											<td>{{ $customerDetail->client->city }}</td>
+											<td>{{ $customerDetail->client->email }}</td>
+											<td>{{ $customerDetail->client->phone_number }}</td>
+											<td>{{ $customerDetail->client->state }}</td> --}}
 
                                             <td>
                                                 <form action="{{ route('customer-details.destroy',$customerDetail->id) }}" method="POST">

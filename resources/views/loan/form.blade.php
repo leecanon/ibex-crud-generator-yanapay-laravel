@@ -47,6 +47,11 @@
             {!! $errors->first('total_pay', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
+            {{ Form::label('clause') }}
+            {{ Form::text('clause', $loan->clause, ['class' => 'form-control' . ($errors->has('clause') ? ' is-invalid' : ''), 'placeholder' => 'Clause']) }}
+            {!! $errors->first('clause', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
             {{ Form::label('id_payments_types') }}
             {{ Form::text('id_payments_types', $loan->id_payments_types, ['class' => 'form-control' . ($errors->has('id_payments_types') ? ' is-invalid' : ''), 'placeholder' => 'Id Payments Types']) }}
             {!! $errors->first('id_payments_types', '<div class="invalid-feedback">:message</div>') !!}
@@ -55,6 +60,16 @@
             {{ Form::label('id_investments') }}
             {{ Form::text('id_investments', $loan->id_investments, ['class' => 'form-control' . ($errors->has('id_investments') ? ' is-invalid' : ''), 'placeholder' => 'Id Investments']) }}
             {!! $errors->first('id_investments', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('late_payment') }}
+            {{ Form::text('late_payment', $loan->late_payment, ['class' => 'form-control' . ($errors->has('late_payment') ? ' is-invalid' : ''), 'placeholder' => 'Late Payment']) }}
+            {!! $errors->first('late_payment', '<div class="invalid-feedback">:message</div>') !!}
+        </div>
+        <div class="form-group">
+            {{ Form::label('total_late_payment') }}
+            {{ Form::text('total_late_payment', $loan->total_late_payment, ['class' => 'form-control' . ($errors->has('total_late_payment') ? ' is-invalid' : ''), 'placeholder' => 'Total Late Payment']) }}
+            {!! $errors->first('total_late_payment', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
     </div>

@@ -17,8 +17,11 @@ use Illuminate\Database\Eloquent\Model;
  * @property $currency
  * @property $start_date
  * @property $total_pay
+ * @property $clause
  * @property $id_payments_types
  * @property $id_investments
+ * @property $late_payment
+ * @property $total_late_payment
  * @property $created_at
  * @property $updated_at
  *
@@ -39,8 +42,10 @@ class Loan extends Model
 		'total_interest' => 'required',
 		'expenses' => 'required',
 		'number_debts' => 'required',
+		'currency' => 'required',
 		'start_date' => 'required',
 		'total_pay' => 'required',
+		'clause' => 'required',
 		'id_payments_types' => 'required',
 		'id_investments' => 'required',
     ];
@@ -52,7 +57,7 @@ class Loan extends Model
      *
      * @var array
      */
-    protected $fillable = ['id_clients','loan_amount','interest','total_interest','expenses','number_debts','currency','start_date','total_pay','id_payments_types','id_investments'];
+    protected $fillable = ['id_clients','loan_amount','interest','total_interest','expenses','number_debts','currency','start_date','total_pay','clause','id_payments_types','id_investments','late_payment','total_late_payment'];
 
 
     /**

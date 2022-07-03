@@ -29,9 +29,10 @@ class CreateLoansTable extends Migration
             $table->decimal('total_interest', $precision = 8, $scale = 2);
             $table->integer('expenses');
             $table->integer('number_debts');
-            $table->string('currency', 15)->nullable();
+            $table->string('currency')->default('SOLES');
             $table->date('start_date');
             $table->decimal('total_pay', $precision = 8, $scale = 2);
+            $table->text('clause', 120);
 
             $table->unsignedBigInteger('id_payments_types'); 
             $table->foreign('id_payments_types')
@@ -46,6 +47,9 @@ class CreateLoansTable extends Migration
                     ->on('investments')
                     ->onUpdate('cascade')
                     ->onDelete('cascade');
+
+            $table->string('late_payment', 15)->nullable();//mora
+            $table->decimal('total_late_payment', $precision = 8, $scale = 2)->nullable();
                     
             $table->timestamps();
         });

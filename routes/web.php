@@ -25,5 +25,6 @@ Route::resource('dues', App\Http\Controllers\DueController::class)->middleware('
 Route::resource('loans', App\Http\Controllers\LoanController::class)->middleware('auth'); 
 Route::resource('customer-details', App\Http\Controllers\CustomerDetailController::class)->middleware('auth'); 
 Route::resource('investments', App\Http\Controllers\InvestmentController::class)->middleware('auth'); 
+Route::resource('simulator', App\Http\Controllers\simulatorController::class)->middleware('auth');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

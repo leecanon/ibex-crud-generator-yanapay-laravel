@@ -31,9 +31,10 @@ class CustomerDetailController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {   
+        $name = Client::pluck('name', 'id');
         $customerDetail = new CustomerDetail();
-        return view('customer-detail.create', compact('customerDetail'));
+        return view('customer-detail.create', compact('customerDetail','name'));
     }
 
     /**

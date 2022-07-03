@@ -32,7 +32,8 @@ class LoanController extends Controller
     public function create()
     {
         $loan = new Loan();
-        return view('loan.create', compact('loan'));
+        $name = Client::pluck('name', 'id');
+        return view('loan.create', compact('loan','name'));
     }
 
     /**
